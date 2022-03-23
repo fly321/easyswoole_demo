@@ -29,12 +29,6 @@ class Index extends Controller
 
     function index()
     {
-        /**
-         * NULL
-        int(1)
-        int(1)
-        int(1)
-         */
         var_dump($this->userid);
         $this->userid = 1;
         var_dump($this->userid);
