@@ -13,9 +13,21 @@ use EasySwoole\Http\AbstractInterface\Controller;
 
 class Index extends Controller
 {
+    # 私有属性不会被释放
+    private $userid;
     function index()
     {
-        $this->response()->write("hello_index");
+        /**
+         * NULL
+        int(1)
+        int(1)
+        int(1)
+         */
+        var_dump($this->userid);
+        $this->userid = 1;
+        var_dump($this->userid);
+
+        // $this->response()->write("hello_index");
     }
 
 }
