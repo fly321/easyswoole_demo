@@ -25,5 +25,8 @@ class Router extends AbstractRouter
             //不再进入控制器解析
             return false;
         });
+        # 新建路由
+        $routeCollector->get('/hello_index','Main/Api/Hello/Index/index');
+
     }
 }
