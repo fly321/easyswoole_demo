@@ -30,6 +30,18 @@ class Index extends Controller
         }
     }
 
+    public function insert(){
+        User::create(['age'=>11,'username'=>'xixihaha','password'=>md5('123456')])->save();
+        $this->writeJson(200,[]);
+    }
+
+    public function update(){
+        User::create()->update(['age'=>12],['id'=>2]);
+        $this->writeJson(200,[]);
+    }
+
+
+
     function test()
     {
         $this->response()->write('this is test');
