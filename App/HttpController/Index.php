@@ -36,7 +36,8 @@ class Index extends Controller
     }
 
     public function update(){
-        User::create()->update(['age'=>12],['id'=>2]);
+        // User::create()->update(['age'=>12],['id'=>2]);
+        User::create()->get(2)->update(['age'=>13]);
         $this->writeJson(200,[]);
     }
 
