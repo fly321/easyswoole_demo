@@ -27,7 +27,7 @@ class User extends AbstractModelAlias
     protected $createTime = 'create_at';
     protected $updateTime = 'update_at';
 
-    public function schemaInfo(bool $isCache = true): Table
+    /*public function schemaInfo(bool $isCache = true): Table
     {
         $table = new Table($this->tableName);
         $table->colInt('id');
@@ -38,7 +38,7 @@ class User extends AbstractModelAlias
         $table->colInt('update_at');
         $table->colInt('test');
         return $table;
-    }
+    }*/
 
 
 }
