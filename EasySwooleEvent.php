@@ -31,7 +31,7 @@ class EasySwooleEvent implements Event
      * User: Fly
      * DateTime: 2022/3/25 21:51
      */
-    protected static function mysqlClient(){
+    public static function mysqlClient(){
 
         $config = new ConfigAlias();
         $config->setDatabase('bb');
@@ -47,7 +47,7 @@ class EasySwooleEvent implements Event
     }
 
 
-    protected static function hotUpdate(){
+    public static function hotUpdate(){
         $watcher = new FileWatcher();
         $rule = new WatchRule(EASYSWOOLE_ROOT . "/App"); // 设置监控规则和监控目录
         $watcher->addRule($rule);
